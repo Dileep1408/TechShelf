@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TechShelf - Member Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <script>
+        const loginToken = localStorage.getItem("techshelfToken");
+
+        if (!loginToken) {
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <header class="site-header">
+
+        <h1>TechShelf</h1>
+
+        <a href="resources.html">
+            Public Resources
+        </a>
+
+        <button id="logout-button">
+            Logout
+        </button>
+
+    </header>
+
+
+    <main class="public-content">
+
+        <!-- ================================= -->
+        <!-- ADD RESOURCE -->
+        <!-- ================================= -->
+
+        <section class="dashboard-section">
+
+            <h2>Member Portal</h2>
+
+            <p>
+                Add a new resource to TechShelf.
+            </p>
+
+            <form id="resource-form">
+
+                <div class="form-group">
+
+                    <label for="title">
+                        Resource Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="Example: GitHub Skills"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <input
+                        type="text"
+                        id="category"
+                        placeholder="Example: Git & GitHub"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="link">
+                        Resource Link
+                    </label>
+
+                    <input
+                        type="url"
+                        id="link"
+                        placeholder="https://example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="note">
+                        Short Note
+                    </label>
+
+                    <textarea
+                        id="note"
+                        placeholder="Briefly describe this resource..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit">
+                    Add Resource
+                </button>
+
+            </form>
+
+            <p id="resource-message"></p>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- MY RESOURCES -->
+        <!-- ================================= -->
+
+        <section class="dashboard-section">
+
+            <h2>My Resources</h2>
+
+            <div
+                id="member-resource-list"
+                class="card-container"
+            >
+
+                <p>Loading your resources...</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="member.js"></script>
+
+</body>
+
+</html>

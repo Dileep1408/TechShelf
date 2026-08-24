@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShelf - Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <h1>TechShelf</h1>
+
+        <div class="header-actions">
+
+            <button type="button">
+                Customize
+            </button>
+
+            <button type="button">
+                Notifications
+            </button>
+
+            <button type="button">
+                Profile
+            </button>
+
+        </div>
+
+    </header>
+
+    <main class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <nav>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="#">
+                    Projects
+                </a>
+
+                <a href="#">
+                    Sessions
+                </a>
+
+                <a href="resources.html">
+                    Resources
+                </a>
+
+                <a href="#">
+                    Chat
+                </a>
+
+                <a href="#">
+                    Settings
+                </a>
+
+                <a href="#">
+                    Help
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <div class="dashboard-content">
+
+            <!-- Search -->
+
+            <div class="search-area">
+
+                <input
+                    type="search"
+                    id="resource-search"
+                    placeholder="Search resources..."
+                >
+
+                <button type="button">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- Active Projects -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Active Projects
+                    </h2>
+
+                    <button type="button">
+                        Add Project
+                    </button>
+
+                </div>
+
+                <div class="card-container">
+
+                    <article class="card">
+
+                        <h3>
+                            Project Title
+                        </h3>
+
+                        <p>
+                            Short description of the project.
+                        </p>
+
+                    </article>
+
+                    <article class="card">
+
+                        <h3>
+                            Project Title
+                        </h3>
+
+                        <p>
+                            Short description of the project.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Active Sessions -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Active Sessions
+                    </h2>
+
+                    <button type="button">
+                        Add Session
+                    </button>
+
+                </div>
+
+                <div class="card-container">
+
+                    <article class="card">
+
+                        <h3>
+                            Session Title
+                        </h3>
+
+                        <p>
+                            Short description of the session.
+                        </p>
+
+                    </article>
+
+                    <article class="card">
+
+                        <h3>
+                            Session Title
+                        </h3>
+
+                        <p>
+                            Short description of the session.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Resources -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Resources
+                    </h2>
+
+                    <button type="button">
+                        Add Resource
+                    </button>
+
+                </div>
+
+                <div class="card-container">
+
+                    <article class="card">
+
+                        <h3>
+                            Introduction to C++
+                        </h3>
+
+                        <p>
+                            Type: Documentation
+                        </p>
+
+                        <p>
+                            A useful introduction to C++ programming.
+                        </p>
+
+                        <a href="#">
+                            Open Resource
+                        </a>
+
+                    </article>
+
+                    <article class="card">
+
+                        <h3>
+                            Web Development Talk
+                        </h3>
+
+                        <p>
+                            Type: Talk
+                        </p>
+
+                        <p>
+                            An introductory talk about modern web development.
+                        </p>
+
+                        <a href="#">
+                            Open Resource
+                        </a>
+
+                    </article>
+
+                    <article class="card">
+
+                        <h3>
+                            TechShelf Repository
+                        </h3>
+
+                        <p>
+                            Type: Repository
+                        </p>
+
+                        <p>
+                            Source code and development resources for TechShelf.
+                        </p>
+
+                        <a href="#">
+                            Open Resource
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Recent Updates -->
+
+            <section class="dashboard-section">
+
+                <h2>
+                    Recent Updates
+                </h2>
+
+                <ul class="updates-list">
+
+                    <li>
+                        New C++ documentation added.
+                    </li>
+
+                    <li>
+                        Web development session scheduled.
+                    </li>
+
+                    <li>
+                        TechShelf project repository updated.
+                    </li>
+
+                    <li>
+                        New resource added to the library.
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

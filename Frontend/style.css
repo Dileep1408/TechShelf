@@ -1,0 +1,636 @@
+/* ==============================
+   GENERAL
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* ==============================
+   LANDING PAGE
+   ============================== */
+
+.landing-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.landing-content {
+    width: 90%;
+    max-width: 600px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.landing-content h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 40px;
+}
+
+.landing-content p {
+    margin-bottom: 30px;
+
+    line-height: 1.5;
+}
+
+.entry-options {
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.entry-options a {
+    padding: 12px 20px;
+
+    background-color: #222;
+    color: white;
+
+    border-radius: 6px;
+}
+
+.entry-options a:hover {
+    background-color: #444;
+}
+
+
+/* ==============================
+   LOGIN PAGE
+   ============================== */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.login-container {
+    width: 90%;
+    max-width: 400px;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.login-container h1 {
+    margin-top: 0;
+
+    text-align: center;
+    font-size: 32px;
+}
+
+.login-container h2 {
+    margin-bottom: 30px;
+
+    text-align: center;
+    font-size: 22px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.login-container form div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.login-container label {
+    font-weight: 600;
+}
+
+.login-container input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    outline: none;
+}
+
+.login-container input:focus {
+    border-color: #222;
+}
+
+.login-container button {
+    padding: 12px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #222;
+    color: white;
+
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #444;
+}
+
+.login-container p {
+    margin-top: 20px;
+
+    text-align: center;
+
+    line-height: 1.5;
+}
+
+.login-container a {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.site-header {
+    min-height: 70px;
+
+    padding: 15px 25px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.site-header h1 {
+    margin: 0;
+
+    font-size: 24px;
+}
+
+.header-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+.header-actions button,
+.site-header > a {
+    padding: 9px 14px;
+
+    background-color: white;
+    color: #222;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.header-actions button:hover,
+.site-header > a:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* ==============================
+   DASHBOARD LAYOUT
+   ============================== */
+
+.dashboard-layout {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+}
+
+
+/* ==============================
+   SIDEBAR
+   ============================== */
+
+.sidebar {
+    width: 220px;
+
+    flex-shrink: 0;
+
+    padding: 25px 15px;
+
+    background-color: white;
+
+    border-right: 1px solid #ddd;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.sidebar nav a {
+    padding: 12px 15px;
+
+    border-radius: 6px;
+
+    color: #333;
+}
+
+.sidebar nav a:hover {
+    background-color: #f0f0f0;
+}
+
+.sidebar nav a:first-child {
+    background-color: #eeeeee;
+
+    font-weight: 600;
+}
+
+
+/* ==============================
+   DASHBOARD CONTENT
+   ============================== */
+
+.dashboard-content {
+    flex: 1;
+
+    width: 100%;
+    max-width: 1400px;
+
+    padding: 30px;
+}
+
+
+/* ==============================
+   SEARCH
+   ============================== */
+
+.search-area {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+.search-area input {
+    flex: 1;
+
+    padding: 13px 15px;
+
+    background-color: white;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    outline: none;
+}
+
+.search-area input:focus {
+    border-color: #222;
+}
+
+.search-area button {
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #222;
+    color: white;
+
+    cursor: pointer;
+}
+
+.search-area button:hover {
+    background-color: #444;
+}
+
+
+/* ==============================
+   DASHBOARD SECTIONS
+   ============================== */
+
+.dashboard-section {
+    margin-bottom: 40px;
+}
+
+.dashboard-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.section-header button {
+    padding: 9px 15px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #222;
+    color: white;
+
+    cursor: pointer;
+}
+
+.section-header button:hover {
+    background-color: #444;
+}
+
+
+/* ==============================
+   CARDS
+   ============================== */
+
+.card-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.card:hover {
+    border-color: #bbb;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+.card a {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   RECENT UPDATES
+   ============================== */
+
+.updates-list {
+    margin: 0;
+    padding: 20px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.updates-list li {
+    margin-bottom: 12px;
+
+    line-height: 1.5;
+}
+
+.updates-list li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==============================
+   PUBLIC RESOURCES
+   ============================== */
+
+.public-content {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+}
+
+
+/* ==============================
+   CHAT
+   ============================== */
+
+.chat-section {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+}
+
+.chat-container {
+    padding: 20px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.chat-messages {
+    min-height: 150px;
+
+    margin-bottom: 20px;
+}
+
+.chat-input {
+    display: flex;
+
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    outline: none;
+}
+
+.chat-input input:focus {
+    border-color: #222;
+}
+
+.chat-input button {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #222;
+    color: white;
+
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #444;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 900px) {
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-content {
+        padding: 20px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .entry-options {
+        flex-direction: column;
+    }
+
+    .search-area {
+        flex-direction: column;
+    }
+
+    .search-area button {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .site-header {
+        padding: 15px;
+    }
+
+    .header-actions {
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+    .header-actions button {
+        flex: 1;
+    }
+
+    .dashboard-content,
+    .public-content {
+        padding: 15px;
+    }
+
+    .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}

@@ -1,0 +1,10 @@
+POST http://localhost:3000/api/resources
+Content-Type: application/json
+
+{
+    "title": "Node.js Documentation",
+    "note": "Official Node.js documentation.",
+    "link": "https://nodejs.org/docs/",
+    "category": "Backend",
+    "created_by": "Admin"
+}

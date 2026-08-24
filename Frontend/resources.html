@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShelf - Resources</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <h1>TechShelf</h1>
+
+        <div class="search-area">
+
+            <input
+                type="search"
+                id="public-resource-search"
+                placeholder="Search resources..."
+            >
+
+            <button type="button">
+                Search
+            </button>
+
+        </div>
+
+        <a href="login.html">
+            Club Member Login
+        </a>
+
+    </header>
+
+
+    <main class="public-content">
+
+        <!-- Resources -->
+
+        <section class="dashboard-section">
+
+            <h2>
+                Resources
+            </h2>
+
+            <!-- JavaScript will put the database resources here -->
+
+            <div
+                class="card-container"
+                id="resource-list"
+            >
+
+                <p>
+                    Loading resources...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Chat -->
+
+        <section class="chat-section">
+
+            <h2>
+                Chat
+            </h2>
+
+            <div class="chat-container">
+
+                <div class="chat-messages">
+
+                    <p>
+                        Welcome to the TechShelf community chat.
+                    </p>
+
+                </div>
+
+                <div class="chat-input">
+
+                    <input
+                        type="text"
+                        placeholder="Type a message..."
+                    >
+
+                    <button type="button">
+                        Send
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
