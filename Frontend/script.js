@@ -19,7 +19,7 @@ async function loadResources() {
     resourceList.innerHTML = "<p>Loading resources...</p>";
 
     const response = await fetch(
-      "http://techshelf-backend.onrender.com/api/resources",
+      "https://techshelf-backend.onrender.com/api/resources",
     );
 
     if (!response.ok) {

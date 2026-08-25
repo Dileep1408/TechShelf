@@ -30,7 +30,7 @@ if (resourceForm) {
 
     try {
       const response = await fetch(
-        "http://techshelf-backend.onrender.com/api/resources",
+        "https://techshelf-backend.onrender.com/api/resources",
         {
           method: "POST",
 
@@ -93,7 +93,7 @@ async function loadMyResources() {
 
   try {
     const response = await fetch(
-      "http://techshelf-backend.onrender.com/api/resources",
+      "https://techshelf-backend.onrender.com/api/resources",
     );
 
     if (!response.ok) {
@@ -224,7 +224,7 @@ async function editResource(resource) {
 
   try {
     const response = await fetch(
-      `http://techshelf-backend.onrender.com/api/resources/${resource.id}`,
+      `https://techshelf-backend.onrender.com/api/resources/${resource.id}`,
       {
         method: "PUT",
 
@@ -278,7 +278,7 @@ async function deleteResource(id) {
 
   try {
     const response = await fetch(
-      `http://techshelf-backend.onrender.com/api/resources/${id}`,
+      `https://techshelf-backend.onrender.com/api/resources/${id}`,
       {
         method: "DELETE",
 
