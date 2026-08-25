@@ -29,22 +29,25 @@ if (resourceForm) {
     const message = document.getElementById("resource-message");
 
     try {
-      const response = await fetch("http://localhost:3000/api/resources", {
-        method: "POST",
+      const response = await fetch(
+        "http://techshelf-backend.onrender.com/api/resources",
+        {
+          method: "POST",
 
-        headers: {
-          "Content-Type": "application/json",
+          headers: {
+            "Content-Type": "application/json",
 
-          Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${token}`,
+          },
+
+          body: JSON.stringify({
+            title,
+            category,
+            link,
+            note,
+          }),
         },
-
-        body: JSON.stringify({
-          title,
-          category,
-          link,
-          note,
-        }),
-      });
+      );
 
       const data = await response.json();
 
@@ -89,7 +92,9 @@ async function loadMyResources() {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/api/resources");
+    const response = await fetch(
+      "http://techshelf-backend.onrender.com/api/resources",
+    );
 
     if (!response.ok) {
       throw new Error("Could not load resources.");
@@ -219,7 +224,7 @@ async function editResource(resource) {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/api/resources/${resource.id}`,
+      `http://techshelf-backend.onrender.com/api/resources/${resource.id}`,
       {
         method: "PUT",
 
@@ -272,13 +277,16 @@ async function deleteResource(id) {
   }
 
   try {
-    const response = await fetch(`http://localhost:3000/api/resources/${id}`, {
-      method: "DELETE",
+    const response = await fetch(
+      `http://techshelf-backend.onrender.com/api/resources/${id}`,
+      {
+        method: "DELETE",
 
-      headers: {
-        Authorization: `Bearer ${token}`,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       },
-    });
+    );
 
     const data = await response.json();
 

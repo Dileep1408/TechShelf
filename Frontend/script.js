@@ -18,7 +18,9 @@ async function loadResources() {
   try {
     resourceList.innerHTML = "<p>Loading resources...</p>";
 
-    const response = await fetch("http://localhost:3000/api/resources");
+    const response = await fetch(
+      "http://techshelf-backend.onrender.com/api/resources",
+    );
 
     if (!response.ok) {
       throw new Error("Failed to load resources.");

@@ -634,3 +634,382 @@ input {
     }
 
 }
+
+/* =========================================================
+   MEMBER PORTAL
+   ========================================================= */
+
+/* Member page main area */
+.public-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 18px 40px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.site-header a {
+    margin-left: auto;
+
+    text-decoration: none;
+    color: #4f46e5;
+
+    font-weight: 600;
+
+    padding: 9px 16px;
+
+    border-radius: 8px;
+
+    transition: 0.2s ease;
+}
+
+.site-header a:hover {
+    background: #eef2ff;
+}
+
+#logout-button {
+    border: none;
+
+    background: #ef4444;
+    color: white;
+
+    padding: 9px 17px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+#logout-button:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.dashboard-section {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.dashboard-section h2 {
+    margin: 0 0 8px;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.dashboard-section > p {
+    margin: 0 0 25px;
+
+    color: #6b7280;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   RESOURCE FORM
+   ========================================================= */
+
+#resource-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group:nth-child(3),
+.form-group:nth-child(4) {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input {
+    height: 45px;
+}
+
+.form-group textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4f46e5;
+
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.10);
+}
+
+
+/* =========================================================
+   ADD RESOURCE BUTTON
+   ========================================================= */
+
+#resource-form > button {
+    grid-column: 1 / -1;
+
+    justify-self: flex-start;
+
+    border: none;
+
+    background: #4f46e5;
+
+    color: white;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#resource-form > button:hover {
+    background: #4338ca;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 12px rgba(79, 70, 229, 0.20);
+}
+
+#resource-form > button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESOURCE MESSAGE
+   ========================================================= */
+
+#resource-message {
+    margin-top: 18px !important;
+
+    margin-bottom: 0 !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MY RESOURCES
+   ========================================================= */
+
+#member-resource-list {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+
+/* Resource cards */
+#member-resource-list .resource-card {
+    background: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#member-resource-list .resource-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #c7d2fe;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+#member-resource-list .resource-card h3 {
+    margin: 0 0 10px;
+
+    color: #111827;
+
+    font-size: 18px;
+}
+
+#member-resource-list .resource-card p {
+    margin: 8px 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+#member-resource-list .resource-card a {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: #4f46e5;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+#member-resource-list .resource-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        padding: 16px 20px;
+
+        flex-wrap: wrap;
+    }
+
+    .site-header h1 {
+        font-size: 22px;
+    }
+
+    .site-header a {
+        margin-left: 0;
+    }
+
+    .public-content {
+        padding: 25px 16px 40px;
+    }
+
+    .dashboard-section {
+        padding: 22px 18px;
+    }
+
+    #resource-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group:nth-child(3),
+    .form-group:nth-child(4) {
+        grid-column: auto;
+    }
+
+    #resource-form > button {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+    #member-resource-list {
+        grid-template-columns: 1fr;
+    }
+}
